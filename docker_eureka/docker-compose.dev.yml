@@ -1,0 +1,13 @@
+services:
+  eureka-server:
+    build:
+      context: ../
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - bytebank-net
+
+networks:
+  bytebank-net:
+    external: true
